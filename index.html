@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panoráma z Hotela Štart</title>
+  <meta name="description" content="Interaktívne 360° panorámy z Hotela Štart.">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/gallery-plugin@5/index.min.css">
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Panoráma z Hotela Štart</h1>
+  </header>
+
+  <main>
+    <div id="viewer" aria-label="Panoráma prehliadač"></div>
+    <noscript>
+      <p class="noscript">Na zobrazenie panorám je potrebné povoliť JavaScript.</p>
+    </noscript>
+  </main>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.179.0/build/three.module.js",
+      "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5/index.module.js",
+      "@photo-sphere-viewer/gallery-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/gallery-plugin@5/index.module.js",
+      "@photo-sphere-viewer/autorotate-plugin": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/autorotate-plugin@5/index.module.js"
+    }
+  }
+  </script>
+
+  <script type="module">
+    import { Viewer } from '@photo-sphere-viewer/core';
+    import { GalleryPlugin } from '@photo-sphere-viewer/gallery-plugin';
+    import { AutorotatePlugin } from '@photo-sphere-viewer/autorotate-plugin';
+
+    const SK = {
+      zoom: 'Priblíženie',
+      zoomOut: 'Oddialiť',
+      zoomIn: 'Priblížiť',
+      moveUp: 'Pohyb hore',
+      moveDown: 'Pohyb dole',
+      moveLeft: 'Pohyb vľavo',
+      moveRight: 'Pohyb vpravo',
+      download: 'Stiahnuť',
+      fullscreen: 'Celá obrazovka',
+      menu: 'Menu',
+      close: 'Zavrieť',
+      twoFingers: 'Použite dva prsty na navigáciu',
+      ctrlZoom: 'Pre priblíženie podržte Ctrl a otáčajte kolieskom myši',
+      loading: 'Načítavam...',
+      gallery: 'Galéria',
+    };
+
+    const showError = (msg) => {
+      const el = document.getElementById('viewer');
+      el.classList.add('viewer-error');
+      el.textContent = msg;
+    };
+
+    const loadEntries = async () => {
+      try {
+        const res = await fetch('static/panos.json', { cache: 'no-cache' });
+        if (!res.ok) {
+          showError(`Nepodarilo sa načítať panorámy (HTTP ${res.status}).`);
+          return null;
+        }
+        return await res.json();
+      } catch (err) {
+        console.error(err);
+        showError('Nepodarilo sa načítať panorámy. Otvorte stránku cez lokálny server (napr. python -m http.server 8000), nie ako súbor.');
+        return null;
+      }
+    };
+
+    const entries = await loadEntries();
+    if (!entries) {
+      // error already shown
+    } else if (!entries.length) {
+      showError('Zatiaľ tu nie sú žiadne panorámy.');
+    } else {
+      const fileFor = (e) => `static/img/${String(e.order).padStart(2, '0')}-${e.slug}.jpg`;
+      const thumbFor = (e) => `static/thumbs/${String(e.order).padStart(2, '0')}-${e.slug}.jpg`;
+
+      const items = entries.map((e) => ({
+        id: e.slug,
+        panorama: fileFor(e),
+        thumbnail: thumbFor(e),
+        name: e.title || e.slug,
+      }));
+
+      const initialId = decodeURIComponent(location.hash.slice(1));
+      const initial = items.find((i) => i.id === initialId) ?? items[0];
+
+      const viewer = new Viewer({
+        container: 'viewer',
+        panorama: initial.panorama,
+        defaultZoomLvl: 30,
+        navbar: ['zoom', 'move', 'gallery', 'fullscreen'],
+        lang: SK,
+        plugins: [
+          [GalleryPlugin, {
+            items,
+            visibleOnLoad: true,
+            hideOnClick: false,
+          }],
+          [AutorotatePlugin, {
+            autostartDelay: 5000,
+            autorotateSpeed: '0.5rpm',
+            autostartOnIdle: true,
+          }],
+        ],
+      });
+
+      viewer.addEventListener('panorama-loaded', (e) => {
+        const match = items.find((i) => i.panorama === e.panorama);
+        if (match && location.hash.slice(1) !== match.id) {
+          history.replaceState(null, '', '#' + match.id);
+        }
+        document.title = (match?.name ? `${match.name} – ` : '') + 'Panoráma z Hotela Štart';
+      });
+    }
+  </script>
+</body>
+</html>

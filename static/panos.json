@@ -1,0 +1,392 @@
+[
+  {
+    "order": 1,
+    "slug": "hala1",
+    "title": "Hala 1",
+    "caption": ""
+  },
+  {
+    "order": 2,
+    "slug": "hala2",
+    "title": "Hala 2",
+    "caption": ""
+  },
+  {
+    "order": 3,
+    "slug": "predsien",
+    "title": "Predsieň",
+    "caption": ""
+  },
+  {
+    "order": 4,
+    "slug": "vratnica",
+    "title": "Vrátnica",
+    "caption": ""
+  },
+  {
+    "order": 5,
+    "slug": "restauracia1",
+    "title": "Reštaurácia 1",
+    "caption": ""
+  },
+  {
+    "order": 6,
+    "slug": "restauracia2",
+    "title": "Reštaurácia 2",
+    "caption": ""
+  },
+  {
+    "order": 7,
+    "slug": "restauracia3",
+    "title": "Reštaurácia 3",
+    "caption": ""
+  },
+  {
+    "order": 8,
+    "slug": "restauracia4",
+    "title": "Reštaurácia 4",
+    "caption": ""
+  },
+  {
+    "order": 9,
+    "slug": "salon",
+    "title": "Salón",
+    "caption": ""
+  },
+  {
+    "order": 10,
+    "slug": "skiklub1",
+    "title": "Ski klub 1",
+    "caption": ""
+  },
+  {
+    "order": 11,
+    "slug": "skiklub2",
+    "title": "Ski klub 2",
+    "caption": ""
+  },
+  {
+    "order": 12,
+    "slug": "skiklub3",
+    "title": "Ski klub 3",
+    "caption": ""
+  },
+  {
+    "order": 13,
+    "slug": "skiklub4",
+    "title": "Ski klub 4",
+    "caption": ""
+  },
+  {
+    "order": 14,
+    "slug": "skiklub5",
+    "title": "Ski klub 5",
+    "caption": ""
+  },
+  {
+    "order": 15,
+    "slug": "kuchyna1",
+    "title": "Kuchyňa 1",
+    "caption": ""
+  },
+  {
+    "order": 16,
+    "slug": "kuchyna2",
+    "title": "Kuchyňa 2",
+    "caption": ""
+  },
+  {
+    "order": 17,
+    "slug": "kuchyna3",
+    "title": "Kuchyňa 3",
+    "caption": ""
+  },
+  {
+    "order": 18,
+    "slug": "kuchyna4",
+    "title": "Kuchyňa 4",
+    "caption": ""
+  },
+  {
+    "order": 19,
+    "slug": "kancelaria1",
+    "title": "Kancelária 1",
+    "caption": ""
+  },
+  {
+    "order": 20,
+    "slug": "kancelaria2",
+    "title": "Kancelária 2",
+    "caption": ""
+  },
+  {
+    "order": 21,
+    "slug": "balkon",
+    "title": "Balkón",
+    "caption": ""
+  },
+  {
+    "order": 22,
+    "slug": "areal1",
+    "title": "Areál 1",
+    "caption": ""
+  },
+  {
+    "order": 23,
+    "slug": "areal2",
+    "title": "Areál 2",
+    "caption": ""
+  },
+  {
+    "order": 24,
+    "slug": "areal3",
+    "title": "Areál 3",
+    "caption": ""
+  },
+  {
+    "order": 25,
+    "slug": "areal4",
+    "title": "Areál 4",
+    "caption": ""
+  },
+  {
+    "order": 26,
+    "slug": "areal5",
+    "title": "Areál 5",
+    "caption": ""
+  },
+  {
+    "order": 27,
+    "slug": "areal6",
+    "title": "Areál 6",
+    "caption": ""
+  },
+  {
+    "order": 28,
+    "slug": "areal7",
+    "title": "Areál 7",
+    "caption": ""
+  },
+  {
+    "order": 29,
+    "slug": "areal8",
+    "title": "Areál 8",
+    "caption": ""
+  },
+  {
+    "order": 30,
+    "slug": "areal9",
+    "title": "Areál 9",
+    "caption": ""
+  },
+  {
+    "order": 31,
+    "slug": "areal10",
+    "title": "Areál 10",
+    "caption": ""
+  },
+  {
+    "order": 32,
+    "slug": "areal11",
+    "title": "Areál 11",
+    "caption": ""
+  },
+  {
+    "order": 33,
+    "slug": "areal12",
+    "title": "Areál 12",
+    "caption": ""
+  },
+  {
+    "order": 34,
+    "slug": "areal13",
+    "title": "Areál 13",
+    "caption": ""
+  },
+  {
+    "order": 35,
+    "slug": "areal14",
+    "title": "Areál 14",
+    "caption": ""
+  },
+  {
+    "order": 36,
+    "slug": "areal15",
+    "title": "Areál 15",
+    "caption": ""
+  },
+  {
+    "order": 37,
+    "slug": "areal16",
+    "title": "Areál 16",
+    "caption": ""
+  },
+  {
+    "order": 38,
+    "slug": "chodba1",
+    "title": "Chodba 1",
+    "caption": ""
+  },
+  {
+    "order": 39,
+    "slug": "chodba2",
+    "title": "Chodba 2",
+    "caption": ""
+  },
+  {
+    "order": 40,
+    "slug": "chodba3",
+    "title": "Chodba 3",
+    "caption": ""
+  },
+  {
+    "order": 41,
+    "slug": "chodba4",
+    "title": "Chodba 4",
+    "caption": ""
+  },
+  {
+    "order": 42,
+    "slug": "chodba5",
+    "title": "Chodba 5",
+    "caption": ""
+  },
+  {
+    "order": 43,
+    "slug": "chodba6",
+    "title": "Chodba 6",
+    "caption": ""
+  },
+  {
+    "order": 44,
+    "slug": "chodba7",
+    "title": "Chodba 7",
+    "caption": ""
+  },
+  {
+    "order": 45,
+    "slug": "chodba8",
+    "title": "Chodba 8",
+    "caption": ""
+  },
+  {
+    "order": 46,
+    "slug": "chodba9",
+    "title": "Chodba 9",
+    "caption": ""
+  },
+  {
+    "order": 47,
+    "slug": "chodba10",
+    "title": "Chodba 10",
+    "caption": ""
+  },
+  {
+    "order": 48,
+    "slug": "chodba11",
+    "title": "Chodba 11",
+    "caption": ""
+  },
+  {
+    "order": 49,
+    "slug": "izba1",
+    "title": "Izba 1",
+    "caption": ""
+  },
+  {
+    "order": 50,
+    "slug": "izba2",
+    "title": "Izba 2",
+    "caption": ""
+  },
+  {
+    "order": 51,
+    "slug": "izba3",
+    "title": "Izba 3",
+    "caption": ""
+  },
+  {
+    "order": 52,
+    "slug": "izba4",
+    "title": "Izba 4",
+    "caption": ""
+  },
+  {
+    "order": 53,
+    "slug": "izba5",
+    "title": "Izba 5",
+    "caption": ""
+  },
+  {
+    "order": 54,
+    "slug": "izba6",
+    "title": "Izba 6",
+    "caption": ""
+  },
+  {
+    "order": 55,
+    "slug": "izba7",
+    "title": "Izba 7",
+    "caption": ""
+  },
+  {
+    "order": 56,
+    "slug": "izba8",
+    "title": "Izba 8",
+    "caption": ""
+  },
+  {
+    "order": 57,
+    "slug": "sklad",
+    "title": "Sklad",
+    "caption": ""
+  },
+  {
+    "order": 58,
+    "slug": "miestnost1",
+    "title": "Miestnosť 1",
+    "caption": ""
+  },
+  {
+    "order": 59,
+    "slug": "miestnost2",
+    "title": "Miestnosť 2",
+    "caption": ""
+  },
+  {
+    "order": 60,
+    "slug": "miestnost3",
+    "title": "Miestnosť 3",
+    "caption": ""
+  },
+  {
+    "order": 61,
+    "slug": "miestnost4",
+    "title": "Miestnosť 4",
+    "caption": ""
+  },
+  {
+    "order": 62,
+    "slug": "povala",
+    "title": "Povala",
+    "caption": ""
+  },
+  {
+    "order": 63,
+    "slug": "toalety",
+    "title": "Toalety",
+    "caption": ""
+  },
+  {
+    "order": 64,
+    "slug": "pivnica1",
+    "title": "Pivnica 1",
+    "caption": ""
+  },
+  {
+    "order": 65,
+    "slug": "pivnica2",
+    "title": "Pivnica 2",
+    "caption": ""
+  }
+]
