@@ -28,6 +28,8 @@ body {
   padding: 0 1rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   border-bottom: 1px solid #1f2937;
   background: #0f1216;
 }
@@ -37,6 +39,12 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+.site-logo {
+  height: calc(var(--header-h) - 28px);
+  width: auto;
+  display: block;
 }
 
 main {
